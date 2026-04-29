@@ -1277,7 +1277,7 @@ function updateCostChart() {
   if (customOn) {
     livingLbl.innerHTML = '€' + customLiving.toLocaleString('de-DE') + ' <em>' + (currentLang === 'en' ? '/yr' : '/año') + '</em>';
   } else {
-    livingLbl.textContent = currentLang === 'en' ? 'defaults' : 'Por Default';
+    livingLbl.textContent = currentLang === 'en' ? 'defaults' : 'predeterminado';
   }
 
   // Compute per-program adjusted costs — sorted cheapest to most expensive
