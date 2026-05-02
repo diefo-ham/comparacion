@@ -313,6 +313,34 @@
   }
   .living-toggle-label input[type=checkbox] { accent-color: var(--color-text2); }
 
+  /* Scholarship applies-to program pills */
+  .schol-applies-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 8px 10px;
+    margin-top: -4px;
+  }
+  .schol-prog-pills {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 4px 5px;
+  }
+  .schol-prog-pill {
+    padding: 2px 9px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: opacity .15s, background .15s;
+    opacity: 0.28;
+    font-family: inherit;
+    line-height: 1.6;
+  }
+  .schol-prog-pill.active { opacity: 1; }
+
   /* Frankfurt 7-semester notice */
   .frankfurt-notice {
     padding: 9px 11px;
@@ -762,7 +790,7 @@
     <div class="verdict-rows">
     <div class="verdict-row">
       <div class="verdict-row-label"><span class='winner w-gold' data-en="Vienna" data-es="Viena">Vienna</span></div>
-      <div class="verdict-row-text" data-en="Near-zero public tuition (≈€1,454/yr) for one of Europe's most rigorous and prestigious degrees. City living costs in Vienna are substantial however — WU's own estimates put student expenses at €1,200–€1,600/month (est. €14,400–€19,200/yr) — so total annual spend is driven almost entirely by the cost of living, not tuition. The financial case remains strong compared to private programmes, but Vienna is not a cheap city." data-es="Matrícula pública casi nula (≈€1.454/año) para uno de los títulos más rigurosos y prestigiosos de Europa. Sin embargo, los costos de vida en Viena son considerables — las propias estimaciones de WU sitúan los gastos estudiantiles en €1.200–€1.600/mes (est. €14.400–€19.200/año) — por lo que el gasto anual total depende casi por completo del costo de vida, no de la matrícula. El argumento financiero sigue siendo sólido frente a los programas privados, pero Viena no es una ciudad barata.">Near-zero public tuition (≈€1,454/yr) for one of Europe's most rigorous and prestigious degrees. City living costs in Vienna are substantial however — WU's own estimates put student expenses at €1,200–€1,600/month (est. €14,400–€19,200/yr) — so total annual spend is driven almost entirely by the cost of living, not tuition. The financial case remains strong compared to private programmes, but Vienna is not a cheap city.</div>
+      <div class="verdict-row-text" data-en="Near-zero public tuition (≈€1,454/yr) for one of Europe's most rigorous and prestigious degrees. City living costs in Vienna are substantial however — WU's 2026 guidance puts total student expenses at €1,200–1,600/month (€14,400–19,200/yr) — so total annual spend is driven almost entirely by the cost of living, not tuition. A realistic budget sits around €1,400/month (≈€16,800/yr). The financial case remains strong compared to private programmes, but Vienna is not a cheap city." data-es="Matrícula pública casi nula (≈€1.454/año) para uno de los títulos más rigurosos y prestigiosos de Europa. Sin embargo, los costos de vida en Viena son considerables — la orientación de WU para 2026 sitúa los gastos estudiantiles totales en €1.200–1.600/mes (€14.400–19.200/año) — por lo que el gasto anual total depende casi por completo del costo de vida, no de la matrícula. Un presupuesto realista se sitúa en torno a €1.400/mes (≈€16.800/año). El argumento financiero sigue siendo sólido frente a los programas privados, pero Viena no es una ciudad barata.">Near-zero public tuition (≈€1,454/yr) for one of Europe's most rigorous and prestigious degrees. City living costs in Vienna are substantial however — WU's 2026 guidance puts total student expenses at €1,200–1,600/month (€14,400–19,200/yr) — so total annual spend is driven almost entirely by the cost of living, not tuition. A realistic budget sits around €1,400/month (≈€16,800/yr). The financial case remains strong compared to private programmes, but Vienna is not a cheap city.</div>
     </div>
     <div class="verdict-row">
       <div class="verdict-row-label"><span class='winner w-purple' data-en="Frankfurt" data-es="Frankfurt">Frankfurt</span></div>
@@ -774,15 +802,15 @@
     </div>
     <div class="verdict-row">
       <div class="verdict-row-label"><span class='winner w-cyan' data-en="Milan" data-es="Milán">Milan</span></div>
-      <div class="verdict-row-text" data-en="Moderate private tuition (~€17,000/yr) combined with above-average city living costs. Justified for students targeting elite European finance or top consulting; harder to justify for broader career trajectories." data-es="Matrícula privada moderada (~€17.000/año) combinada con costos de vida superiores a la media. Justificada para estudiantes que apuntan a las finanzas europeas de élite o la consultoría de primer nivel; más difícil de justificar para trayectorias profesionales más amplias.">Moderate private tuition (~€17,000/yr) combined with above-average city living costs. Justified for students targeting elite European finance or top consulting; harder to justify for broader career trajectories.</div>
+      <div class="verdict-row-text" data-en="Moderate private tuition (~€17,000/yr) combined with Milan's high living costs. Student-specific sources put monthly expenses at €1,200–1,500 (€14,400–18,000/yr), making Milan one of the more expensive cities in this comparison overall. Justified for students targeting elite European finance or top consulting; harder to justify for broader career trajectories." data-es="Matrícula privada moderada (~€17.000/año) combinada con los elevados costos de vida de Milán. Fuentes específicas para estudiantes sitúan los gastos mensuales en €1.200–1.500 (€14.400–18.000/año), lo que convierte a Milán en una de las ciudades más caras de esta comparativa en conjunto. Justificada para estudiantes que apuntan a las finanzas europeas de élite o la consultoría de primer nivel; más difícil de justificar para trayectorias profesionales más amplias.">Moderate private tuition (~€17,000/yr) combined with Milan's high living costs. Student-specific sources put monthly expenses at €1,200–1,500 (€14,400–18,000/yr), making Milan one of the more expensive cities in this comparison overall. Justified for students targeting elite European finance or top consulting; harder to justify for broader career trajectories.</div>
     </div>
     <div class="verdict-row">
       <div class="verdict-row-label"><span class='winner w-coral' data-en="Hamburg" data-es="Hamburgo">Hamburg</span></div>
-      <div class="verdict-row-text" data-en="Private tuition (≈€14,600/yr) for a specialist vocational qualification. Hamburg is a relatively expensive city, with realistic student living costs of €13,200–€15,600/yr — making the true all-in cost higher than the tuition headline suggests. Strong value if logistics and global trade are the target; a harder proposition if ambitions extend beyond the sector." data-es="Matrícula privada (≈€14.600/año) por una titulación vocacional especializada. Hamburgo es una ciudad relativamente cara, con costos de vida estudiantiles realistas de €13.200–€15.600/año — lo que hace que el costo total real sea más alto de lo que sugiere solo la matrícula. Buen valor si la logística y el comercio global son el objetivo; una propuesta más complicada si las ambiciones van más allá del sector.">Private tuition (≈€14,600/yr) for a specialist vocational qualification. Hamburg is a relatively expensive city, with realistic student living costs of €13,200–€15,600/yr — making the true all-in cost higher than the tuition headline suggests. Strong value if logistics and global trade are the target; a harder proposition if ambitions extend beyond the sector.</div>
+      <div class="verdict-row-text" data-en="Private tuition (≈€14,600/yr) for a specialist vocational qualification. Hamburg is a relatively expensive city, with realistic student living costs of €13,200–€18,600/yr — making the true all-in cost higher than the tuition headline suggests. Strong value if logistics and global trade are the target; a harder proposition if ambitions extend beyond the sector." data-es="Matrícula privada (≈€14.600/año) por una titulación vocacional especializada. Hamburgo es una ciudad relativamente cara, con costos de vida estudiantiles realistas de €13.200–€18.600/año — lo que hace que el costo total real sea más alto de lo que sugiere solo la matrícula. Buen valor si la logística y el comercio global son el objetivo; una propuesta más complicada si las ambiciones van más allá del sector.">Private tuition (≈€14,600/yr) for a specialist vocational qualification. Hamburg is a relatively expensive city, with realistic student living costs of €13,200–€18,600/yr — making the true all-in cost higher than the tuition headline suggests. Strong value if logistics and global trade are the target; a harder proposition if ambitions extend beyond the sector.</div>
     </div>
     <div class="verdict-row">
       <div class="verdict-row-label"><span class='winner w-blue' data-en="Berlin" data-es="Berlín">Berlin</span></div>
-      <div class="verdict-row-text" data-en="Private tuition (≈€13,825/yr) for a vocational bridge. The value lies in location, speed to employment, and post-study visa access — not in academic prestige. Worth it if direct German market entry is the objective; a poor trade if a broader or more prestigious outcome is expected." data-es="Matrícula privada (≈€13.825/año) por un puente vocacional. El valor reside en la ubicación, la velocidad de empleabilidad y el acceso a la visa de trabajo posterior — no en el prestigio académico. Merece la pena si el objetivo es la entrada directa al mercado alemán; una mala proporción si se espera un resultado más amplio o más prestigioso.">Private tuition (≈€13,825/yr) for a vocational bridge. The value lies in location, speed to employment, and post-study visa access — not in academic prestige. Worth it if direct German market entry is the objective; a poor trade if a broader or more prestigious outcome is expected.</div>
+      <div class="verdict-row-text" data-en="Private tuition (≈€13,825/yr) for a vocational bridge. Berlin is one of Germany's more affordable major cities — current student budgets typically run €1,000–1,450/month (≈€12,000–17,400/yr) — making the all-in cost lower than Frankfurt despite comparable tuition. The value lies in location, speed to employment, and post-study visa access — not in academic prestige. Worth it if direct German market entry is the objective; a poor trade if a broader or more prestigious outcome is expected." data-es="Matrícula privada (≈€13.825/año) por un puente vocacional. Berlín es una de las grandes ciudades alemanas más asequibles — los presupuestos estudiantiles actuales suelen rondar €1.000–1.450/mes (≈€12.000–17.400/año) — lo que hace que el costo total sea menor que en Fráncfort a pesar de una matrícula comparable. El valor reside en la ubicación, la velocidad de empleabilidad y el acceso a la visa de trabajo posterior — no en el prestigio académico. Merece la pena si el objetivo es la entrada directa al mercado alemán; una mala proporción si se espera un resultado más amplio o más prestigioso.">Private tuition (≈€13,825/yr) for a vocational bridge. Berlin is one of Germany's more affordable major cities — current student budgets typically run €1,000–1,450/month (≈€12,000–17,400/yr) — making the all-in cost lower than Frankfurt despite comparable tuition. The value lies in location, speed to employment, and post-study visa access — not in academic prestige. Worth it if direct German market entry is the objective; a poor trade if a broader or more prestigious outcome is expected.</div>
     </div>
     </div>
   </div>
@@ -845,7 +873,7 @@
     <p style="font-size:13px;color:var(--color-text2);line-height:1.65;margin-bottom:10px;" data-en="Four stages: (1) online application with documents; (2) profile review by the admissions team; (3) online Assessment Centre — includes a maths test, cognitive test, English test, and structured interview; (4) decision communicated by email, together with any scholarship offer. Response time after submission is typically two weeks. No separate English certificate is required: language is tested within the AC itself." data-es="Cuatro etapas: (1) solicitud en línea con documentos; (2) revisión del perfil por el equipo de admisiones; (3) Centro de Evaluación en línea — incluye un test de matemáticas, test cognitivo, test de inglés y entrevista estructurada; (4) decisión comunicada por correo electrónico, junto con cualquier oferta de beca. El tiempo de respuesta tras la presentación es normalmente de dos semanas. No se requiere certificado de inglés independiente: el idioma se evalúa dentro del propio AC.">Four stages: (1) online application with documents; (2) profile review by the admissions team; (3) online Assessment Centre — includes a maths test, cognitive test, English test, and structured interview; (4) decision communicated by email, together with any scholarship offer. Response time after submission is typically two weeks. No separate English certificate is required: language is tested within the AC itself.</p>
 
     <p style="font-size:12px;font-weight:600;color:var(--color-text3);letter-spacing:.05em;text-transform:uppercase;margin:0 0 6px;" data-en="Documents required" data-es="Documentos requeridos">Documents required</p>
-    <p style="font-size:13px;color:var(--color-text2);line-height:1.65;" data-en="Recognised school-leaving certificate (Abitur, IB Diploma, A-Levels, US HS Diploma, European Baccalaureate, or equivalent — final certificate can follow later). Optional: motivation letter up to 500 words. No GMAT, SAT, or GRE required. Application fee: €100 plus €400 enrolment fee upon admission." data-es="Certificado de conclusión de bachillerato reconocido (Abitur, Diploma IB, A-Levels, Diploma de preparatoria estadounidense, Bachillerato Europeo o equivalente — el certificado final puede entregarse posteriormente). Opcional: carta de motivación de hasta 500 palabras. No se requiere GMAT, SAT ni GRE. Tarifa de solicitud: €100 más €400 de matrícula al ser admitido.">Recognised school-leaving certificate (Abitur, IB Diploma, A-Levels, US HS Diploma, European Baccalaureate, or equivalent — final certificate can follow later). Optional: motivation letter up to 500 words. No GMAT, SAT, or GRE required. Application fee: €100 plus €400 enrolment fee upon admission.</p>
+    <p style="font-size:13px;color:var(--color-text2);line-height:1.65;" data-en="Recognised school-leaving certificate (Abitur, IB Diploma, A-Levels, US HS Diploma, European Baccalaureate, or equivalent — final certificate can follow later). Optional: motivation letter up to 500 words. No GMAT, SAT, or GRE required. Application fee: €100 plus €350 enrolment fee upon admission." data-es="Certificado de conclusión de bachillerato reconocido (Abitur, Diploma IB, A-Levels, Diploma de preparatoria estadounidense, Bachillerato Europeo o equivalente — el certificado final puede entregarse posteriormente). Opcional: carta de motivación de hasta 500 palabras. No se requiere GMAT, SAT ni GRE. Tarifa de solicitud: €100 más €350 de matrícula al ser admitido.">Recognised school-leaving certificate (Abitur, IB Diploma, A-Levels, US HS Diploma, European Baccalaureate, or equivalent — final certificate can follow later). Optional: motivation letter up to 500 words. No GMAT, SAT, or GRE required. Application fee: €100 plus €350 enrolment fee upon admission.</p>
   </div>
 
   <!-- BREMEN -->
@@ -945,7 +973,7 @@
 <div class="dashboard-grid">
   <div class="controls-panel card">
     <p class="card-title" data-en="Decision Weights" data-es="Pesos de Decisión">Decision Weights</p>
-    <p class="card-sub" data-en="Adjust weights across 9 independent dimensions. Scores normalise automatically." data-es="Ajusta los pesos en 9 dimensiones independientes. Las puntuaciones se normalizan automáticamente.">Adjust weights across 9 independent dimensions. Scores normalise automatically.</p>
+    <p class="card-sub" data-en="Adjust weights across 14 independent dimensions. Scores normalise automatically." data-es="Ajusta los pesos en 14 dimensiones independientes. Las puntuaciones se normalizan automáticamente.">Adjust weights across 14 independent dimensions. Scores normalise automatically.</p>
 
     <div class="scenario-pills">
       <button class="scenario-btn" onclick="applyScenario('balanced')"      data-en="<strong>Default</strong>"                  data-es="<strong>Por Default</strong>"><strong>Default</strong></button>
@@ -993,7 +1021,7 @@
       <input type="range" id="w-ent" min="0" max="10" value="5" oninput="updateDash()">
     </div>
 
-    <p style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text3);margin:10px 0 6px;" data-en="— Practical Constraints —" data-es="— Restricciones Prácticas —">— Practical Constraints —</p>
+    <p style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text3);margin:10px 0 6px;" data-en="— Practical Concerns —" data-es="— Preocupaciones Prácticas —">— Practical Constraints —</p>
     <div class="slider-group">
       <div class="slider-label"><span data-en="Financial Accessibility" data-es="Accesibilidad Financiera">Financial Accessibility</span><span id="val-fin">6</span></div>
       <input type="range" id="w-fin" min="0" max="10"  value="6" oninput="updateDash()">
@@ -1001,6 +1029,15 @@
     <div class="slider-group">
       <div class="slider-label"><span data-en="Admission Accessibility" data-es="Accesibilidad de Admisión">Admission Accessibility</span><span id="val-sel">4</span></div>
       <input type="range" id="w-sel" min="0" max="10"  value="4" oninput="updateDash()">
+    </div>
+    <div class="slider-group">
+      <div class="slider-label">
+        <span data-en="Proximity to Santi" data-es="Cercanía a Santi" style="display:flex;align-items:center;gap:5px;">
+          Proximity to Santi
+        </span>
+        <span id="val-snt">4</span>
+      </div>
+      <input type="range" id="w-snt" min="0" max="10" value="4" oninput="updateDash()">
     </div>
 
     <p style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text3);margin:10px 0 6px;" data-en="— International &amp; Future Fit —" data-es="— Internacional y Futuro —">— International &amp; Future Fit —</p>
@@ -1052,7 +1089,7 @@
         <div class="cost-ctrl-row">
           <span class="cost-ctrl-label" data-en="Duration" data-es="Duración">Duration</span>
           <input type="range" id="cost-semesters" min="1" max="10" value="6" step="1"
-                 oninput="updateCostChart()" style="width:100%;">
+                 oninput="updateDash()" style="width:100%;">
           <span class="cost-ctrl-value" id="cost-sem-label">6 semesters</span>
         </div>
 
@@ -1064,8 +1101,21 @@
             <button class="schol-type-btn"         id="schol-eur-btn" onclick="setScholType('eur')">€</button>
           </div>
           <input type="range" id="cost-schol" min="0" max="100" value="0" step="1"
-                 oninput="updateCostChart()" style="width:100%;">
+                 oninput="updateDash()" style="width:100%;">
           <span class="cost-ctrl-value" id="cost-schol-label">0%</span>
+        </div>
+
+        <!-- Scholarship applies-to: per-program pills -->
+        <div class="schol-applies-row">
+          <span class="cost-ctrl-label" style="font-size:9px;opacity:0.65;" data-en="Applies to" data-es="Aplica a">Applies to</span>
+          <div class="schol-prog-pills">
+            <button class="schol-prog-pill active" data-schol-prog="0" style="color:#7F77DD;border-color:#7F77DD;background:rgba(127,119,221,0.1)" onclick="toggleScholProg(0)" data-en="Frankfurt" data-es="Frankfurt">Frankfurt</button>
+            <button class="schol-prog-pill active" data-schol-prog="1" style="color:#1D9E75;border-color:#1D9E75;background:rgba(29,158,117,0.1)"  onclick="toggleScholProg(1)" data-en="Bremen"    data-es="Bremen">Bremen</button>
+            <button class="schol-prog-pill active" data-schol-prog="2" style="color:#D85A30;border-color:#D85A30;background:rgba(216,90,48,0.1)"   onclick="toggleScholProg(2)" data-en="Hamburg"   data-es="Hamburgo">Hamburg</button>
+            <button class="schol-prog-pill active" data-schol-prog="3" style="color:#0E9AA7;border-color:#0E9AA7;background:rgba(14,154,167,0.1)"  onclick="toggleScholProg(3)" data-en="Milan"     data-es="Milán">Milan</button>
+            <button class="schol-prog-pill active" data-schol-prog="4" style="color:#BF8F2C;border-color:#BF8F2C;background:rgba(191,143,44,0.1)"  onclick="toggleScholProg(4)" data-en="Vienna"    data-es="Viena">Vienna</button>
+            <button class="schol-prog-pill active" data-schol-prog="5" style="color:#2D7DD2;border-color:#2D7DD2;background:rgba(45,125,210,0.1)"  onclick="toggleScholProg(5)" data-en="Berlin"    data-es="Berlín">Berlin</button>
+          </div>
         </div>
 
         <!-- Living override -->
@@ -1073,12 +1123,12 @@
           <span class="cost-ctrl-label" data-en="Living / yr" data-es="Vida / año">Living / yr</span>
           <div class="living-override-wrap">
             <label class="living-toggle-label">
-              <input type="checkbox" id="living-custom-toggle" onchange="updateCostChart()">
+              <input type="checkbox" id="living-custom-toggle" onchange="updateDash()">
               <span data-en="Custom" data-es="Personalizar">Custom</span>
             </label>
             <input type="number" id="living-custom-val" class="living-override-input"
                    min="0" step="500" value="12000" disabled
-                   oninput="updateCostChart()" placeholder="€/yr">
+                   oninput="updateDash()" placeholder="€/yr">
           </div>
           <span class="cost-ctrl-value" id="cost-living-label">defaults</span>
         </div>
@@ -1092,23 +1142,47 @@
 </div></div></div>
 <script>
 // --- 1. Global Data & Constants ---
-const textColor = getComputedStyle(document.documentElement).getPropertyValue('--color-text').trim();
-const gridColor = getComputedStyle(document.documentElement).getPropertyValue('--color-border').trim();
+function getTextColor() { return getComputedStyle(document.documentElement).getPropertyValue('--color-text').trim(); }
+function getGridColor() { return getComputedStyle(document.documentElement).getPropertyValue('--color-border').trim(); }
+let textColor = getTextColor();
+let gridColor = getGridColor();
+
+function applyChartTheme() {
+  textColor = getTextColor();
+  gridColor = getGridColor();
+  Chart.defaults.color = textColor;
+
+  if (radarChart) {
+    radarChart.options.scales.r.grid.color       = gridColor;
+    radarChart.options.scales.r.angleLines.color  = gridColor;
+    radarChart.options.scales.r.pointLabels.color = textColor;
+    radarChart.update();
+  }
+  if (rankChart) {
+    rankChart.options.scales.x.grid.color  = gridColor;
+    rankChart.options.scales.x.ticks.color = textColor;
+    rankChart.options.scales.y.ticks.color = textColor;
+    rankChart.update();
+  }
+  if (costChart) {
+    costChart.options.scales.x.grid.color   = gridColor;
+    costChart.options.scales.x.ticks.color  = textColor;
+    costChart.options.scales.y.ticks.color  = textColor;
+    costChart.data.datasets[1].backgroundColor = gridColor;
+    costChart.update();
+  }
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyChartTheme);
 
 const mcdaData = [
-  { id: 0, name: "Frankfurt", esName: "Frankfurt", color: "#7F77DD", t: 16400, l: 16000, lRange: "€14,400–€18,000 /yr", dur: 3, anl: 7, brd: 9, fld: 8, rec: 7, sig: 8, loc: 9, ent: 8, sel: 4, aif: 8, lng: 6, mob: 6, flex: 9 },
-  { id: 1, name: "Bremen",    esName: "Bremen",    color: "#1D9E75", t: 20696, l: 11400, lRange: "€10,800–€12,000 /yr (excl. accommodation)", dur: 3, housingProvided: true, anl: 6, brd: 7, fld: 6, rec: 7, sig: 5, loc: 5, ent: 8, sel: 5, aif: 6, lng: 9, mob: 5, flex: 7 },
-  { id: 2, name: "Hamburg",   esName: "Hamburgo",  color: "#D85A30", t: 14600, l: 14400, lRange: "€13,200–€15,600 /yr", dur: 3, anl: 5, brd: 5, fld: 3, rec: 8, sig: 4, loc: 7, ent: 4, sel: 2, aif: 4, lng: 5, mob: 4, flex: 3 },
-  { id: 3, name: "Milan",     esName: "Milán",     color: "#0E9AA7", t: 17000, l: 15000, lRange: "€14,400–€18,000 /yr", dur: 3, anl:10, brd: 2, fld:10, rec: 9, sig:10, loc: 8, ent: 6, sel: 2, aif: 5, lng: 9, mob: 9, flex: 5 },
-  { id: 4, name: "Vienna",    esName: "Viena",     color: "#BF8F2C", t:  1454, l: 16800, lRange: "€14,400–€19,200 /yr", dur: 3, anl: 9, brd: 3, fld: 7, rec: 9, sig:10, loc: 6, ent: 6, sel: 2, aif: 8, lng: 3, mob: 5, flex: 8 },
-  { id: 5, name: "Berlin",    esName: "Berlín",    color: "#2D7DD2", t: 13825, l: 13200, lRange: "€10,800–€15,600 /yr", dur: 3, anl: 4, brd: 6, fld: 4, rec: 5, sig: 3, loc: 8, ent: 6, sel: 9, aif: 3, lng: 9, mob: 4, flex: 3 }
+  { id: 0, name: "Frankfurt", esName: "Frankfurt", color: "#7F77DD", t: 16400, l: 16000, lRange: "€14,400–€18,000 /yr",                          lRangeEs: "€14.400–€18.000 /año",                              dur: 3, anl: 7, brd: 9, fld: 8, rec: 7, sig: 8, loc: 9, ent: 8, sel: 4, aif: 8, lng: 6, mob: 6, flex: 9, snt: 3 },
+  { id: 1, name: "Bremen",    esName: "Bremen",    color: "#1D9E75", t: 20696, l: 11400, lRange: "€10,800–€12,000 /yr (excl. accommodation)",       lRangeEs: "€10.800–€12.000 /año (excl. alojamiento)",          dur: 3, housingProvided: true, anl: 6, brd: 7, fld: 6, rec: 7, sig: 5, loc: 5, ent: 8, sel: 5, aif: 6, lng: 9, mob: 5, flex: 7, snt: 8 },
+  { id: 2, name: "Hamburg",   esName: "Hamburgo",  color: "#D85A30", t: 14600, l: 15000, lRange: "€13,200–€18,600 /yr",                            lRangeEs: "€13.200–€18.600 /año",                              dur: 3, anl: 5, brd: 5, fld: 3, rec: 8, sig: 4, loc: 7, ent: 4, sel: 2, aif: 4, lng: 5, mob: 4, flex: 3, snt:10 },
+  { id: 3, name: "Milan",     esName: "Milán",     color: "#0E9AA7", t: 17000, l: 15000, lRange: "€14,400–€18,000 /yr",                            lRangeEs: "€14.400–€18.000 /año",                              dur: 3, anl:10, brd: 2, fld:10, rec: 9, sig:10, loc: 8, ent: 6, sel: 2, aif: 5, lng: 9, mob: 9, flex: 5, snt: 1 },
+  { id: 4, name: "Vienna",    esName: "Viena",     color: "#BF8F2C", t:  1454, l: 16800, lRange: "€14,400–€19,200 /yr (WU official)",              lRangeEs: "€14.400–€19.200 /año (cifra oficial de WU)",        dur: 3, anl: 9, brd: 3, fld: 7, rec: 9, sig:10, loc: 6, ent: 6, sel: 2, aif: 8, lng: 3, mob: 5, flex: 8, snt: 2 },
+  { id: 5, name: "Berlin",    esName: "Berlín",    color: "#2D7DD2", t: 13825, l: 14400, lRange: "€12,000–€17,400 /yr",                            lRangeEs: "€12.000–€17.400 /año",                              dur: 3, anl: 4, brd: 6, fld: 4, rec: 5, sig: 3, loc: 8, ent: 6, sel: 9, aif: 3, lng: 9, mob: 4, flex: 3, snt: 5 }
 ];
-
-// Pre-calculate Financial Accessibility (fin) and Total Cost
-mcdaData.forEach(p => p.totalCost = (p.t + p.l) * p.dur);
-const maxCost = Math.max(...mcdaData.map(p => p.totalCost));
-const minCost = Math.min(...mcdaData.map(p => p.totalCost));
-mcdaData.forEach(p => { p.fin = 10 * (1 - (p.totalCost - minCost) / (maxCost - minCost)); });
 
 const activeProgs = new Set([0, 1, 2, 3, 4, 5]);
 let currentLang = 'en';
@@ -1187,8 +1261,8 @@ radarChart = new Chart(document.getElementById('radar'), {
         const prog = mcdaData.find(d => (currentLang === 'en' ? d.name : d.esName) === ctx.label);
         const isLiving = ctx.dataset.label === 'Living';
         const dsLabel = ctx.dataset.label === 'Tuition'
-          ? (currentLang === 'en' ? 'Tuition' : 'Matrícula')
-          : (currentLang === 'en' ? 'Living'  : 'Vida');
+          ? (currentLang === 'en' ? 'Tuition'      : 'Matrícula')
+          : (currentLang === 'en' ? 'Living costs'  : 'Gastos de vida');
         const semesters = parseInt(document.getElementById('cost-semesters').value);
         const effYears = (prog && prog.id === 0 && frankfurtFixed7Cost) ? 3.5 : (semesters / 2);
         const annualVal = effYears > 0 ? ctx.parsed.x / effYears : ctx.parsed.x;
@@ -1198,21 +1272,22 @@ radarChart = new Chart(document.getElementById('radar'), {
           if (!customOn) {
             const perYrLabel = currentLang === 'en' ? '/yr' : '/año';
             line += '  (≈€' + Math.round(annualVal).toLocaleString('de-DE') + ' ' + perYrLabel + ')';
-            return [line, '  ' + (currentLang === 'en' ? 'Est. range' : 'Rango est.') + ': ' + prog.lRange];
+            const rangeStr   = currentLang === 'en' ? prog.lRange : (prog.lRangeEs || prog.lRange);
+            const rangeLabel = currentLang === 'en' ? 'Est. range' : 'Rango est.';
+            return [line, '  ' + rangeLabel + ': ' + rangeStr];
           }
         }
         return line;
       } } } },
       scales: { x: { stacked: true, grid: { color: gridColor }, ticks: { color: textColor, callback: v => '€' + (v >= 1000 ? (v/1000).toFixed(0)+'k' : v) } }, y: { stacked: true, grid: { display: false }, ticks: { color: textColor, callback: function(val) {
-        const label = this.getLabelForValue(val);
-        const prog = mcdaData.find(d => (currentLang === 'en' ? d.name : d.esName) === label);
-        return label;
+        return this.getLabelForValue(val);
       } } } } }
   });
 }
 
 // --- 2b. Cost Chart State ---
 let scholType = 'pct'; // 'pct' | 'eur'
+const scholProgs = new Set([0, 1, 2, 3, 4, 5]); // programs the scholarship applies to
 
 function setScholType(type) {
   scholType = type;
@@ -1225,8 +1300,18 @@ function setScholType(type) {
   } else {
     slider.min = 0; slider.max = 30000; slider.step = 250;
   }
-  updateCostChart();
+  updateDash();
 }
+
+function toggleScholProg(idx) {
+  scholProgs.has(idx) ? scholProgs.delete(idx) : scholProgs.add(idx);
+  document.querySelectorAll('[data-schol-prog]').forEach(btn => {
+    const i = parseInt(btn.getAttribute('data-schol-prog'));
+    btn.classList.toggle('active', scholProgs.has(i));
+  });
+  updateDash();
+}
+
 
 function updateCostChart() {
   const semesters   = parseInt(document.getElementById('cost-semesters').value);
@@ -1261,6 +1346,13 @@ function updateCostChart() {
     livingLbl.textContent = currentLang === 'en' ? 'defaults' : 'predeterminado';
   }
 
+  // Helper: compute discount for a program (0 if not in scholProgs)
+  const discountFor = (p, effYears) => {
+    if (!scholProgs.has(p.id)) return 0;
+    const d = scholType === 'pct' ? p.t * (scholVal / 100) : (scholVal / effYears);
+    return Math.min(d, p.t);
+  };
+
   // Compute per-program adjusted costs — sorted cheapest to most expensive
   const visibleData = mcdaData
     .filter(p => activeProgs.has(p.id))
@@ -1268,8 +1360,8 @@ function updateCostChart() {
     .sort((a, b) => {
       const costOf = d => {
         const effYears = (d.id === 0 && frankfurtFixed7Cost) ? 3.5 : years;
-        const disc = scholType === 'pct' ? d.t * (scholVal / 100) : (scholVal / effYears);
-        return Math.max(0, (d.t - Math.min(disc, d.t)) * effYears) + (customOn ? customLiving : d.l) * effYears;
+        const disc = discountFor(d, effYears);
+        return Math.max(0, (d.t - disc) * effYears) + (customOn ? customLiving : d.l) * effYears;
       };
       return costOf(a) - costOf(b);
     });
@@ -1277,16 +1369,13 @@ function updateCostChart() {
 
   const tuitionData = visibleData.map(d => {
     const effYears = (d.id === 0 && frankfurtFixed7Cost) ? 3.5 : years;
-    const annualT = d.t;
-    let discount  = scholType === 'pct' ? annualT * (scholVal / 100) : (scholVal / effYears);
-    discount = Math.min(discount, annualT); // cap at full tuition
-    return Math.max(0, (annualT - discount) * effYears);
+    const disc = discountFor(d, effYears);
+    return Math.max(0, (d.t - disc) * effYears);
   });
 
   const livingData = visibleData.map(d => {
     const effYears = (d.id === 0 && frankfurtFixed7Cost) ? 3.5 : years;
-    const annualL = customOn ? customLiving : d.l;
-    return annualL * effYears;
+    return (customOn ? customLiving : d.l) * effYears;
   });
 
   costChart.data.labels = labels;
@@ -1301,19 +1390,20 @@ function updateCostChart() {
 }
 
 // --- 3. Shared cost helper & summary updater ---
-// Dynamically recompute fin (Financial Accessibility) for all programs.
-// When useFixed7Frankfurt is true, Frankfurt uses 3.5 yr instead of its static
-// dur value. Because fin is min-max normalised across all programs, changing
-// Frankfurt's cost also shifts every other program's score proportionally.
-function getEffectiveFin(useFixed7Frankfurt, activeSet) {
-  // Normalise only across the programs currently in the comparison.
-  // Without this, toggling off the cheapest program (Vienna) would still anchor
-  // the min-cost reference, silently depressing every remaining program's fin score.
+function getEffectiveFin(useFixed7Frankfurt, activeSet, sType, sVal, customOn, customLiving, semCount) {
   const pool = activeSet ? mcdaData.filter(p => activeSet.has(p.id)) : mcdaData;
-  const costs = pool.map(p => ({
-    id: p.id,
-    cost: (p.t + p.l) * ((p.id === 0 && useFixed7Frankfurt) ? 3.5 : p.dur)
-  }));
+  const costs = pool.map(p => {
+    const effYears = (p.id === 0 && useFixed7Frankfurt) ? 3.5 : (semCount ? semCount / 2 : p.dur);
+    const sv = sVal || 0;
+    let disc = 0;
+    if (scholProgs.has(p.id)) {
+      disc = (sType === 'pct') ? p.t * (sv / 100) : Math.min(p.t, sv / effYears);
+      disc = Math.min(disc, p.t);
+    }
+    const tuition = Math.max(0, (p.t - disc) * effYears);
+    const annualL = customOn ? (customLiving || 0) : p.l;
+    return { id: p.id, cost: tuition + annualL * effYears };
+  });
   const maxC  = Math.max(...costs.map(c => c.cost));
   const minC  = Math.min(...costs.map(c => c.cost));
   const range = maxC - minC || 1;
@@ -1323,28 +1413,21 @@ function getEffectiveFin(useFixed7Frankfurt, activeSet) {
 }
 
 function getAdjustedTotalCost(p, years, scholVal, customOn, customLiving) {
-  const annualT = p.t;
-  let discount = scholType === 'pct' ? annualT * (scholVal / 100) : (scholVal / years);
-  discount = Math.min(discount, annualT);
-  const tuition = Math.max(0, (annualT - discount) * years);
+  let disc = 0;
+  if (scholProgs.has(p.id)) {
+    disc = scholType === 'pct' ? p.t * (scholVal / 100) : Math.min(p.t, scholVal / years);
+    disc = Math.min(disc, p.t);
+  }
+  const tuition = Math.max(0, (p.t - disc) * years);
   const annualL = customOn ? customLiving : p.l;
-  return tuition + (annualL * years);
+  return tuition + annualL * years;
 }
 
 function updateSummary() {
-  const ids = ['anl', 'brd', 'fld', 'rec', 'sig', 'loc', 'fin', 'ent', 'sel', 'aif', 'lng', 'mob', 'flex'];
+  const ids = ['anl', 'brd', 'fld', 'rec', 'sig', 'loc', 'fin', 'ent', 'sel', 'aif', 'lng', 'mob', 'flex', 'snt'];
   const w = {}; let totalW = 0;
   ids.forEach(id => { w[id] = parseInt(document.getElementById(`w-${id}`).value); totalW += w[id]; });
   if (totalW === 0) totalW = 1;
-
-  const summaryFinMap = getEffectiveFin(frankfurtFixed7Rank, activeProgs);
-  const results = mcdaData
-    .filter(p => activeProgs.has(p.id))
-    .map(p => ({ ...p, score: p.anl*(w.anl/totalW) + p.brd*(w.brd/totalW) + p.fld*(w.fld/totalW) + p.rec*(w.rec/totalW) + p.sig*(w.sig/totalW) + p.loc*(w.loc/totalW) + summaryFinMap[p.id]*(w.fin/totalW) + p.ent*(w.ent/totalW) + p.sel*(w.sel/totalW) + p.aif*(w.aif/totalW) + p.lng*(w.lng/totalW) + p.mob*(w.mob/totalW) + p.flex*(w.flex/totalW) }))
-    .sort((a, b) => b.score - a.score);
-
-  if (results.length === 0) return;
-  const top = results[0];
 
   const semesters    = parseInt(document.getElementById('cost-semesters').value);
   const years        = semesters / 2;
@@ -1352,6 +1435,13 @@ function updateSummary() {
   const customOn     = document.getElementById('living-custom-toggle').checked;
   const customLiving = parseFloat(document.getElementById('living-custom-val').value) || 0;
 
+  const summaryFinMap = getEffectiveFin(frankfurtFixed7Rank, activeProgs, scholType, scholVal, customOn, customLiving, semesters);
+  const results = mcdaData
+    .filter(p => activeProgs.has(p.id))
+    .map(p => ({ ...p, score: p.anl*(w.anl/totalW) + p.brd*(w.brd/totalW) + p.fld*(w.fld/totalW) + p.rec*(w.rec/totalW) + p.sig*(w.sig/totalW) + p.loc*(w.loc/totalW) + summaryFinMap[p.id]*(w.fin/totalW) + p.ent*(w.ent/totalW) + p.sel*(w.sel/totalW) + p.aif*(w.aif/totalW) + p.lng*(w.lng/totalW) + p.mob*(w.mob/totalW) + p.flex*(w.flex/totalW) + p.snt*(w.snt/totalW) }))
+    .sort((a, b) => b.score - a.score);
+  if (results.length === 0) return;
+  const top = results[0];
   const adjustedCost = getAdjustedTotalCost(top, (top.id === 0 && frankfurtFixed7Cost) ? 3.5 : years, scholVal, customOn, customLiving);
   const name    = currentLang === 'en' ? top.name : top.esName;
   const effSem  = (top.id === 0 && frankfurtFixed7Cost) ? 7 : semesters;
@@ -1366,7 +1456,7 @@ function updateSummary() {
 
 // --- 4. Update Functions ---
 function updateDash() {
-  const ids = ['anl', 'brd', 'fld', 'rec', 'sig', 'loc', 'fin', 'ent', 'sel', 'aif', 'lng', 'mob', 'flex'];
+  const ids = ['anl', 'brd', 'fld', 'rec', 'sig', 'loc', 'fin', 'ent', 'sel', 'aif', 'lng', 'mob', 'flex', 'snt'];
   const w = {}; let totalW = 0;
   ids.forEach(id => {
     const val = parseInt(document.getElementById(`w-${id}`).value);
@@ -1375,9 +1465,13 @@ function updateDash() {
   });
   if(totalW === 0) totalW = 1;
 
-  const finMap = getEffectiveFin(frankfurtFixed7Rank, activeProgs);
+  const _sem  = parseInt(document.getElementById('cost-semesters').value);
+  const _sVal = parseFloat(document.getElementById('cost-schol').value) || 0;
+  const _cOn  = document.getElementById('living-custom-toggle').checked;
+  const _cLiv = parseFloat(document.getElementById('living-custom-val').value) || 0;
+  const finMap = getEffectiveFin(frankfurtFixed7Rank, activeProgs, scholType, _sVal, _cOn, _cLiv, _sem);
   let results = mcdaData.map(p => ({
-    ...p, score: (p.anl*(w.anl/totalW) + p.brd*(w.brd/totalW) + p.fld*(w.fld/totalW) + p.rec*(w.rec/totalW) + p.sig*(w.sig/totalW) + p.loc*(w.loc/totalW) + finMap[p.id]*(w.fin/totalW) + p.ent*(w.ent/totalW) + p.sel*(w.sel/totalW) + p.aif*(w.aif/totalW) + p.lng*(w.lng/totalW) + p.mob*(w.mob/totalW) + p.flex*(w.flex/totalW))
+    ...p, score: (p.anl*(w.anl/totalW) + p.brd*(w.brd/totalW) + p.fld*(w.fld/totalW) + p.rec*(w.rec/totalW) + p.sig*(w.sig/totalW) + p.loc*(w.loc/totalW) + finMap[p.id]*(w.fin/totalW) + p.ent*(w.ent/totalW) + p.sel*(w.sel/totalW) + p.aif*(w.aif/totalW) + p.lng*(w.lng/totalW) + p.mob*(w.mob/totalW) + p.flex*(w.flex/totalW) + p.snt*(w.snt/totalW))
   })).filter(p => activeProgs.has(p.id)).sort((a, b) => b.score - a.score);
   currentResults = results;
 
@@ -1402,7 +1496,6 @@ function setLang(lang) {
   // Update Charts
   radarChart.data.labels = radarLabels[lang];
   radarChart.update();
-  updateCostChart();
   updateDash();
 }
 
@@ -1427,17 +1520,17 @@ function toggleProg(idx) {
 
 function applyScenario(type) {
   const sets = {
-    finance:      { anl: 9, brd: 2, fld: 9, rec: 8, sig: 9, loc: 8, fin: 3, ent: 3, sel: 3, aif: 7, lng: 5, mob: 8, flex: 5 },
-    research:     { anl: 10, brd: 6, fld: 10, rec: 5, sig: 7, loc: 5, fin: 3, ent: 2, sel: 2, aif: 7, lng: 6, mob: 7, flex: 8 },
-    intlbiz:      { anl: 5, brd: 8, fld: 4, rec: 7, sig: 6, loc: 7, fin: 5, ent: 4, sel: 4, aif: 5, lng: 9, mob: 8, flex: 6 },
-    budget:       { anl: 5, brd: 5, fld: 6, rec: 7, sig: 5, loc: 6, fin: 10, ent: 4, sel: 5, aif: 4, lng: 6, mob: 4, flex: 5 },
-    balanced:     { anl: 6, brd: 5, fld: 7, rec: 7, sig: 6, loc: 6, fin: 6, ent: 5, sel: 4, aif: 5, lng: 6, mob: 6, flex: 6 },
-    balanced_equal: { anl: 5, brd: 5, fld: 5, rec: 5, sig: 5, loc: 5, fin: 5, ent: 5, sel: 5, aif: 5, lng: 5, mob: 5, flex: 5 },
-    allzeros:       { anl: 0, brd: 0, fld: 0, rec: 0, sig: 0, loc: 0, fin: 0, ent: 0, sel: 0, aif: 0, lng: 0, mob: 0, flex: 0 },
-    startup:      { anl: 5, brd: 7, fld: 4, rec: 5, sig: 4, loc: 8, fin: 5, ent: 10, sel: 5, aif: 5, lng: 7, mob: 6, flex: 7 },
-    creative:     { anl: 3, brd: 9, fld: 2, rec: 5, sig: 6, loc: 8, fin: 5, ent: 7, sel: 4, aif: 3, lng: 7, mob: 7, flex: 9 },
-    masterstrack: { anl: 10, brd: 7, fld: 9, rec: 4, sig: 8, loc: 3, fin: 4, ent: 2, sel: 2, aif: 9, lng: 5, mob: 6, flex: 9 },
-    policy:       { anl: 5, brd: 9, fld: 3, rec: 6, sig: 6, loc: 6, fin: 4, ent: 3, sel: 4, aif: 5, lng: 9, mob: 9, flex: 7 }
+    finance:        { anl: 9, brd: 2, fld: 9, rec: 8, sig: 9, loc: 8, fin: 3, ent: 3, sel: 3, aif: 7, lng: 5, mob: 8, flex: 5, snt: 4 },
+    research:       { anl:10, brd: 6, fld:10, rec: 5, sig: 7, loc: 5, fin: 3, ent: 2, sel: 2, aif: 7, lng: 6, mob: 7, flex: 8, snt: 4 },
+    intlbiz:        { anl: 5, brd: 8, fld: 4, rec: 7, sig: 6, loc: 7, fin: 5, ent: 4, sel: 4, aif: 5, lng: 9, mob: 8, flex: 6, snt: 4 },
+    budget:         { anl: 5, brd: 5, fld: 6, rec: 7, sig: 5, loc: 6, fin:10, ent: 4, sel: 5, aif: 4, lng: 6, mob: 4, flex: 5, snt: 7 },
+    balanced:       { anl: 6, brd: 5, fld: 7, rec: 7, sig: 6, loc: 6, fin: 6, ent: 5, sel: 4, aif: 5, lng: 6, mob: 6, flex: 6, snt: 4 },
+    balanced_equal: { anl: 5, brd: 5, fld: 5, rec: 5, sig: 5, loc: 5, fin: 5, ent: 5, sel: 5, aif: 5, lng: 5, mob: 5, flex: 5, snt: 5 },
+    allzeros:       { anl: 0, brd: 0, fld: 0, rec: 0, sig: 0, loc: 0, fin: 0, ent: 0, sel: 0, aif: 0, lng: 0, mob: 0, flex: 0, snt: 0 },
+    startup:        { anl: 5, brd: 7, fld: 4, rec: 5, sig: 4, loc: 8, fin: 5, ent:10, sel: 5, aif: 5, lng: 7, mob: 6, flex: 7, snt: 4 },
+    creative:       { anl: 3, brd: 9, fld: 2, rec: 5, sig: 6, loc: 8, fin: 5, ent: 7, sel: 4, aif: 3, lng: 7, mob: 7, flex: 9, snt: 4 },
+    masterstrack:   { anl:10, brd: 7, fld: 9, rec: 4, sig: 8, loc: 3, fin: 4, ent: 2, sel: 2, aif: 9, lng: 5, mob: 6, flex: 9, snt: 4 },
+    policy:         { anl: 5, brd: 9, fld: 3, rec: 6, sig: 6, loc: 6, fin: 4, ent: 3, sel: 4, aif: 5, lng: 9, mob: 9, flex: 7, snt: 4 }
   };
   Object.keys(sets[type]).forEach(k => { document.getElementById(`w-${k}`).value = sets[type][k]; });
   updateDash();
@@ -1445,6 +1538,11 @@ function applyScenario(type) {
 
 
 // ── Wiki accordion ──────────────────────────────────────────────────────────
+function updateTocHighlight() {
+  // Highlights the TOC entry matching whichever section is currently open.
+  // No TOC element exists in this document, so this is intentionally a no-op.
+}
+
 function toggleSection(id) {
   const sec = document.getElementById(id);
   if (!sec) return;
@@ -1456,11 +1554,15 @@ function toggleSection(id) {
 }
 
 function resizeChartsIn(sectionId) {
-  const chartMap = {
-    's-radar':     () => radarChart && radarChart.resize(),
-    's-dashboard': () => { rankChart && rankChart.resize(); costChart && costChart.resize(); }
-  };
-  if (chartMap[sectionId]) setTimeout(chartMap[sectionId], 300);
+  if (sectionId === 's-radar') {
+    setTimeout(() => radarChart && radarChart.resize(), 300);
+  } else if (sectionId === 's-dashboard') {
+    setTimeout(() => {
+      rankChart && rankChart.resize();
+      costChart && costChart.resize();
+      updateDash(); // force full data repaint after layout is visible
+    }, 300);
+  }
 }
 
 // Initialize
