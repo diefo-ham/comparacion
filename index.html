@@ -985,8 +985,6 @@
       <button class="scenario-btn" onclick="applyScenario('budget')"        data-en="Budget Priority"          data-es="Prioridad Presupuesto">Budget Priority</button>
       <button class="scenario-btn" onclick="applyScenario('startup')"       data-en="Startup / Admin"          data-es="Startup / Admin">Startup / Admin</button>
       <button class="scenario-btn" onclick="applyScenario('creative')"      data-en="Creative / Cultural"      data-es="Creativo / Cultural">Creative / Cultural</button>
-      <button class="scenario-btn" onclick="applyScenario('masterstrack')"  data-en="Masters / PhD Prep"       data-es="Prep. Máster / PhD">Masters / PhD Prep</button>
-      <button class="scenario-btn" onclick="applyScenario('policy')"        data-en="Policy / NGO / Diplomacy" data-es="Política / ONG / Diplomacia">Policy / NGO / Diplomacy</button>
     </div>
 
     <p style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text3);margin:4px 0 6px;" data-en="— Academic Experience —" data-es="— Experiencia Académica —">— Academic Experience —</p>
@@ -1528,9 +1526,7 @@ function applyScenario(type) {
     balanced_equal: { anl: 5, brd: 5, fld: 5, rec: 5, sig: 5, loc: 5, fin: 5, ent: 5, sel: 5, aif: 5, lng: 5, mob: 5, flex: 5, snt: 5 },
     allzeros:       { anl: 0, brd: 0, fld: 0, rec: 0, sig: 0, loc: 0, fin: 0, ent: 0, sel: 0, aif: 0, lng: 0, mob: 0, flex: 0, snt: 0 },
     startup:        { anl: 5, brd: 7, fld: 4, rec: 5, sig: 4, loc: 8, fin: 5, ent:10, sel: 5, aif: 5, lng: 7, mob: 6, flex: 7, snt: 4 },
-    creative:       { anl: 3, brd: 9, fld: 2, rec: 5, sig: 6, loc: 8, fin: 5, ent: 7, sel: 4, aif: 3, lng: 7, mob: 7, flex: 9, snt: 4 },
-    masterstrack:   { anl:10, brd: 7, fld: 9, rec: 4, sig: 8, loc: 3, fin: 4, ent: 2, sel: 2, aif: 9, lng: 5, mob: 6, flex: 9, snt: 4 },
-    policy:         { anl: 5, brd: 9, fld: 3, rec: 6, sig: 6, loc: 6, fin: 4, ent: 3, sel: 4, aif: 5, lng: 9, mob: 9, flex: 7, snt: 4 }
+    creative:       { anl: 3, brd: 9, fld: 2, rec: 5, sig: 6, loc: 8, fin: 5, ent: 7, sel: 4, aif: 3, lng: 7, mob: 7, flex: 9, snt: 4 }
   };
   Object.keys(sets[type]).forEach(k => { document.getElementById(`w-${k}`).value = sets[type][k]; });
   updateDash();
